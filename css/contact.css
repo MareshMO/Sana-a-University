@@ -1,0 +1,98 @@
+/* start contact */
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contact .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .contact .content {
+        flex-direction: column;
+    }
+}
+.contact .content form {
+    flex-basis: 70%;
+}
+
+.contact .content form .main-input {
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid chocolate;
+}
+@media (max-width: 767px) {
+    .contact .content form .main-input {
+        padding: 10px;
+    }
+}
+
+.contact .content form .main-input:focus {
+    outline: none;
+}
+
+.contact .content form textarea.main-input {
+    height: 200px;
+    border: 1px solid chocolate;
+}
+
+.contact .content form input[type="submit"] {
+    display: block;
+    margin-left: auto;
+    background: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 40px;
+    text-transform: capitalize;
+    border: 2px solid chocolate;
+    position: relative;
+    transition: all .5s;
+    cursor: pointer;
+}
+.contact .content form input[type="submit"]:hover {
+    background-color: chocolate;
+    border-color: chocolate;
+    color: white;
+}
+
+.contact .content .info {
+    flex-basis: 25%;
+    padding: 0;
+}
+@media (max-width: 767px) {
+    .contact .content .info{
+        order: -1;
+        text-align: center;
+    }
+}
+.contact .content .info h4 {
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 500;
+}
+.contact .content .info p {
+    color: #777;
+    line-height: 1.7;
+}
+
+.contact .content .info h4:last-of-type {
+    margin-top: 80px;
+}
+@media (max-width: 767px) {
+    .contact .content .info h4:last-of-type {
+        margin-top: 30px;
+    }
+}
+.contact .content .info address {
+    color: #777;
+    line-height: 1.7;
+}
+@media (max-width: 767px) {
+    .contact .content .info address {
+        margin-bottom: 30px;
+    }
+}
+/* end contact */

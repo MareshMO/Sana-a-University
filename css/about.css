@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    padding: 0 20px 0 20px;
+}
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    } 
+}
+@media (min-width: 767px) {
+    .container {
+        width: 750px;
+    } 
+}
+@media (min-width: 992px) {
+    .container {
+        width: 950px;
+    } 
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    } 
+}
+.use-a-lot {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.use-a-lot h2{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.use-a-lot h2 + p{
+    color: #777;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main {
+    color: white;
+    width: 100%;
+    height: 70vh;
+    background-image: url(../img/about1\ \(1\).jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgb(0,0,0,.6);
+    position: relative;
+}
+
+.main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.main .header .logo {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+@media (max-width: 767px) {
+    .main .header .logo {
+        font-size: 1.2em;
+    } 
+}
+
+.main .header .logo:hover {
+    color: chocolate;
+}
+
+.main .header .nav ul {
+    display: flex;
+}
+@media (max-width: 767px) {
+    .main .header .nav {
+        display: none;
+    } 
+}
+.main .header .nav ul li {
+    margin-left: 40px;
+    font-size: 1em;
+    text-transform: uppercase;
+    position: relative;
+}
+.main .header .nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.main .header .nav ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: chocolate;
+    width: 0;
+    height: 2px;
+    transition: all .5s;
+}
+.main .header .nav ul li:hover::before {
+    width: 100%;
+}
+
+.main .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+@media (max-width: 767px) {
+    .main .text {
+        font-size: 40px;
+    } 
+}
+
+.info {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.info .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info .content .text {
+    flex-basis: 48%;
+    margin: 10px;
+}
+
+@media (max-width: 767px) {
+    .info .content .text {
+        flex-basis: 100%;
+        order: 2;
+        margin: 10px;
+    }
+} 
+
+.info .content .text h1 {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.info .content .text p {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: #777;
+    line-height: 1.5;
+}
+.info .text a {
+    display: inline-block;
+    color: chocolate;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 2px solid rgb(0, 0, 0);
+    position: relative;
+    transition: all .5s;
+}
+.info .text a::before,
+.info .text a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background-color: rgb(0, 0, 0);
+    width: 30px;
+    height: 2px;
+    transition: all .9s;
+}
+.info .text a::before {
+    left: -18px;
+}
+.info .text a::after {
+    right: -18px;
+}
+.info .text a:hover {
+    background-color: chocolate;
+    border-color: chocolate;
+    color: white;
+}
+.info .text a:hover::before,
+.info .text a:hover::after {
+    background-color: chocolate;
+}
+
+.info .content .image {
+    margin: 10px;
+    flex-basis: 48%;
+    height: 400px;
+    background-image: url(../img/about1\ \(2\).jpg);
+    background-size: cover;
+}
+@media (max-width: 767px) {
+    .info .content .image {
+        margin: 10px;
+        flex-basis: 100%;
+        order: 1;
+    }
+} 
+
+.about {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.about .icon {
+    margin-top: -50px;
+}
+
+.about .icon i {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: chocolate;
+}
+.about h3 span {
+    color: chocolate;
+}
+
+
+

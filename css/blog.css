@@ -1,0 +1,118 @@
+.blog {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.blog .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog .content .example {
+    flex-basis: 60%;
+    margin: 10px;
+}
+@media (max-width: 992px) {
+    .blog .content .example {
+        flex-basis: 100%;
+    }
+}
+
+.blog .content .example .img {
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/blog.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgb(0, 0, 0, .4);
+}
+
+.blog .content .example h2 {
+    margin: 30px 0;
+}
+.blog .content .example p {
+    color: #777;
+    line-height: 1.5;
+}
+.blog .content .example p:first-of-type {
+    margin-bottom: 20px;
+}
+.blog .content .example p:last-of-type {
+    margin-top: 20px;
+}
+
+.blog .content form {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px;  
+    border: 1px solid black;  
+}
+.blog .content form input[type="text"],
+.blog .content form input[type="email"] {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid chocolate;
+}
+.blog .content form input:focus {
+    outline: none;
+}
+.blog .content form textarea {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid chocolate;
+    height: 200px;
+}
+.blog .content form textarea:focus {
+    outline: none;
+}
+.blog .content form input[type="submit"] {
+    display: block;
+    margin-left: auto;
+    background: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    text-transform: capitalize;
+    border: 2px solid chocolate;
+    position: relative;
+    transition: all .5s;
+    cursor: pointer;
+}
+.blog .content form input[type="submit"]:hover {
+    background-color: chocolate;
+    border-color: chocolate;
+    color: white;
+}
+
+.blog .content .online {
+    flex-basis: 35%;
+    margin: 10px;
+}
+@media (max-width: 992px) {
+    .blog .content .online {
+        flex-basis: 100%;
+        order: -1;
+        margin-bottom: 50px;
+    }
+}
+
+.blog .content .online h2 {
+    text-align: center;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    background-color: chocolate;
+}
+
+.blog .content .online p {
+    margin-top: 20px;
+    width: 100%;
+    color: #777;
+    position: relative;
+}
+.blog .content .online p::after {
+    content: attr(data);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
