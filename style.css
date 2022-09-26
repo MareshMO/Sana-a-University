@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "works sans", sans-serif;
 }
 
 .container {
@@ -51,10 +52,10 @@ ul {
     color: white;
     width: 100%;
     height: 100vh;
-    background-image: url(./img/hero-bg.png);
+    background-image: url(./img/sana.jpg);
     background-size: cover;
     background-blend-mode: multiply;
-    background-color: rgb(0,0,0,.8);
+    background-color: rgb(0,0,0,.6);
     position: relative;
 }
 
@@ -66,7 +67,7 @@ ul {
     height: 50px;
 }
 .main .header .logo {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -163,7 +164,7 @@ ul {
 
 .main .text h1 {
     margin-bottom: 40px;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 800;
     text-transform: capitalize;
 }
@@ -248,6 +249,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 50px;
 }
 .campus .contain .image {
     width: 300px;
@@ -297,6 +299,126 @@ ul {
 .campus .contain .image:hover p {
     top: 50%;
 }
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter li {
+    padding: 10px;
+    margin-left: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 550;
+}
+
+.filter li:first-of-type {
+    background-color: rgb(210, 105, 30);
+    color: white;
+}
+
+.campus .img-cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.campus .img-cont .box {
+    overflow: hidden;
+    margin: 2px;
+    position: relative;
+}
+
+@media (min-width: 767px) {
+    .campus .img-cont .box {
+        flex-basis: calc(50% - 4px);
+    }
+}
+
+@media (min-width: 992px) {
+    .campus .img-cont .box {
+        flex-basis: calc(25% - 4px);
+    }
+}
+
+.campus .img-cont .box .img {
+    transition: all .5s;
+}
+
+.campus .img-cont .box:hover .img {
+    transform: rotate(3deg) scale(1.2);
+}
+
+.campus .img-cont .box .img img {
+    width: 100%;
+}
+
+.campus .img-cont .box .capture {
+    position: absolute;
+    bottom: -200px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: rgb(210, 105, 30, .8);
+    height: 50%;
+    width: 100%;
+    transition: all .5s;
+}
+
+.campus .img-cont .box:hover .capture {
+    bottom: 0;
+    transition: all .5s;
+}
+
+.campus .img-cont .box .capture h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.campus .img-cont .box .capture p {
+    color: var(--main-color);
+}
+
+.campus .more {
+    width: fit-content;
+    margin: 50px auto 0;
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 2px solid rgb(0, 0, 0);
+    position: relative;
+    transition: all .5s;
+    font-weight: bold;
+}
+.campus .more::before,
+.campus .more::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background-color: rgb(0, 0, 0);
+    width: 30px;
+    height: 2px;
+    transition: all .9s;
+}
+.campus .more::before {
+    left: -18px;
+}
+.campus .more::after {
+    right: -18px;
+}
+.campus .more:hover {
+    background-color: chocolate;
+    border-color: chocolate;
+}
+.campus .more:hover::before,
+.campus .more:hover::after {
+    background-color: chocolate;
+}
+/* end campus */
 
 .facilities {
     padding-top: 100px;
